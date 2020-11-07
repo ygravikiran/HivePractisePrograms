@@ -1,4 +1,4 @@
-package com.ardentex.spark.hiveudf
+package udfexamples
 
 import java.sql.Timestamp
 import java.text.SimpleDateFormat

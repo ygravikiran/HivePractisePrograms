@@ -1,7 +1,10 @@
-package com.ardentex.spark.hiveudf
+package udfexamples
 
 import org.apache.hadoop.io.LongWritable
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.FlatSpec
+import org.scalatest.Matchers
+
+import udfexamples.ToHex;
 
 class ToHexSpec extends FlatSpec with Matchers {
   val udf = new ToHex

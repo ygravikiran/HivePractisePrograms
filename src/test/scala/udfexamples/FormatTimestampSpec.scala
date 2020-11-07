@@ -1,10 +1,13 @@
-package com.ardentex.spark.hiveudf
+package udfexamples
 
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
 import java.util.Date
 
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.FlatSpec
+import org.scalatest.Matchers
+
+import udfexamples.FormatTimestamp;
 
 class FormatTimestampSpec extends FlatSpec with Matchers {
   val udf = new FormatTimestamp

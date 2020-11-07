@@ -1,19 +1,17 @@
-name := """spark-hive-udf"""
-version := "0.1.0"
-organization := "com.ardentex"
+name := "HivePractisePrograms"
+version := "1.0"
+organization := "com"
 
-scalaVersion := "2.11.11"
-scalacOptions ++= Seq("-unchecked", "-feature", "-deprecation")
-crossScalaVersions := Seq(scalaVersion.value, "2.10.6")
+scalaVersion := "2.12.3"
 
-libraryDependencies ++= Seq(
-  "org.apache.hive"   % "hive-exec"   % "2.1.1" % Provided,
-  "org.apache.hadoop" % "hadoop-core" % "1.2.1" % Provided,
-  "org.scalatest"    %% "scalatest"   % "3.0.1" % Test
-)
 
-// Without this repo, you might get a failure trying to resolve transitive
-// dependency org.pentaho:pentaho-aggdesigner-algorithm:5.1.5-jhyde
-resolvers += "conjars" at "http://conjars.org/repo"
+  // https://mvnrepository.com/artifact/org.apache.hive/hive-exec
+libraryDependencies += "org.apache.hive" % "hive-exec" % "3.1.2"
 
-addCommandAlias("jar", ";test;package")
+// https://mvnrepository.com/artifact/org.apache.spark/spark-hive
+libraryDependencies += "org.apache.spark" %% "spark-hive" % "3.0.1" % "provided"
+
+// https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core
+libraryDependencies += "org.apache.hadoop" % "hadoop-core" % "1.2.1"
+
+libraryDependencies +=    "org.scalatest" %% "scalatest" % "3.0.8" % Test

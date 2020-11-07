@@ -1,4 +1,4 @@
-package com.ardentex.spark.hiveudf
+package udfexamples
 
 import org.apache.hadoop.hive.ql.exec.UDF
 import org.apache.hadoop.io.LongWritable
